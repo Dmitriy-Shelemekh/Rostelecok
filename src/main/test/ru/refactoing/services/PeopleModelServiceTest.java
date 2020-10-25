@@ -25,7 +25,7 @@ class PeopleModelServiceTest {
     @Test
     void isPeopleExistTest() {
         PeopleRepository mockedRepo = Mockito.mock(PeopleRepository.class);
-        Mockito.when(mockedRepo.findById(1L)).thenReturn(true);
+        Mockito.when(mockedRepo.findById(peopleModel.getId())).thenReturn(true);
 
         Assert.assertTrue(peopleService.comparePeopleWithDb(peopleModel));
     }
